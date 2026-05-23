@@ -1,0 +1,967 @@
+/* ============================================================
+   Hayti Airways — Feuille de css principale
+   Auteur  : Projet Examen Intra — Université Quisqueya 2025-2026
+   Thème   : Compagnie aérienne haïtienne
+   ============================================================ */
+
+/* ---------- Variables globales ---------- */
+:root {
+  --bleu-nuit:    #0A1628;   /* arrière-plan sombre principal */
+  --bleu-roi:     #1B3A6B;   /* bleu secondaire */
+  --or-caraibe:   #C9973A;   /* accent doré caribéen */
+  --or-clair:     #F0C060;   /* or lumineux hover */
+  --rouge-haiti:  #C8102E;   /* rouge drapeau haïtien */
+  --blanc:        #FFFFFF;
+  --gris-clair:   #F5F5F5;
+  --gris-texte:   #6C757D;
+  --transition:   0.35s ease;
+}
+
+/* ---------- Reset & typographie ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', Georgia, serif; /* police élégante */
+  background-color: var(--blanc);
+  color: var(--bleu-nuit);
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+p, li, a, span, td, th, label, input, textarea, select, button {
+  font-family: 'Lato', 'Segoe UI', sans-serif;
+}
+
+/* ---------- Barre de navigation ---------- */
+.navbar {
+  background-color: var(--bleu-nuit) !important;
+  padding: 1rem 2rem;
+  border-bottom: 3px solid var(--or-caraibe);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: box-shadow var(--transition);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.navbar-brand .brand-logo {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, var(--or-caraibe), var(--or-clair));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--bleu-nuit);
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.navbar-brand .brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.navbar-brand .brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--blanc);
+  letter-spacing: 0.5px;
+}
+
+.navbar-brand .brand-sub {
+  font-size: 0.65rem;
+  color: var(--or-caraibe);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.navbar-toggler {
+  border-color: var(--or-caraibe) !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23C9973A' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+.nav-link {
+  color: rgba(255,255,255,0.85) !important;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  position: relative;
+  transition: color var(--transition);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--or-caraibe);
+  transition: width var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 70%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--or-caraibe) !important;
+}
+
+/* ---------- Boutons ---------- */
+.btn-gold {
+  background: linear-gradient(135deg, var(--or-caraibe), var(--or-clair));
+  color: var(--bleu-nuit);
+  font-weight: 700;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  transition: transform var(--transition), box-shadow var(--transition), filter var(--transition);
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-gold:hover {
+  filter: brightness(1.15);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(201,151,58,0.4);
+  color: var(--bleu-nuit);
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: var(--or-caraibe);
+  border: 2px solid var(--or-caraibe);
+  padding: 0.7rem 1.8rem;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: all var(--transition);
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-outline-gold:hover {
+  background: var(--or-caraibe);
+  color: var(--bleu-nuit);
+  transform: translateY(-2px);
+}
+
+/* ---------- Section titre générique ---------- */
+.section-title {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section-title h2 {
+  font-size: 2.4rem;
+  color: var(--bleu-nuit);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.6rem;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--or-caraibe);
+}
+
+.section-title p {
+  color: var(--gris-texte);
+  max-width: 600px;
+  margin: 1rem auto 0;
+}
+
+/* ---------- Hero banner (page Accueil) ---------- */
+.hero {
+  min-height: 92vh;
+  background: linear-gradient(160deg, var(--bleu-nuit) 0%, var(--bleu-nuit) 60%, #153c80 100%);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 0 3rem;
+}
+
+/* Motif géométrique décoratif */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,151,58,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -120px;
+  left: -100px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,16,46,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(201,151,58,0.15);
+  border: 1px solid rgba(201,151,58,0.4);
+  color: var(--or-caraibe);
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: var(--blanc);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 .accent {
+  color: var(--or-caraibe);
+}
+
+.hero p.lead {
+  color: rgba(255,255,255,0.75);
+  font-size: 1.15rem;
+  max-width: 550px;
+  margin-bottom: 2.5rem;
+}
+
+.hero-plane-icon {
+  font-size: clamp(6rem, 14vw, 11rem);
+  opacity: 0.40;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%) rotate(-20deg);
+  color: var(--blanc); 
+  pointer-events: none;
+  line-height: 1;
+}
+
+/* Stats rapides sous le hero */
+.hero-stats {
+  background: rgba(255,255,255,0.05);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 2rem 0 1.5rem;
+}
+
+.hero-stats .stat-item {
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.hero-stats .stat-item:last-child {
+  border-right: none;
+}
+
+.hero-stats .stat-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--or-caraibe);
+  line-height: 1;
+}
+
+.hero-stats .stat-label {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.3rem;
+}
+
+/* ---------- Carrousel ---------- */
+#carouselHayti .carousel-item img {
+  height: 480px;
+  object-fit: cover;
+  filter: brightness(0.65);
+}
+
+#carouselHayti .carousel-caption {
+  background: linear-gradient(transparent, rgba(10,22,40,0.85));
+  padding: 2rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: left;
+}
+
+#carouselHayti .carousel-caption h5 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--blanc);
+  margin-bottom: 0.3rem;
+}
+
+#carouselHayti .carousel-caption p {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.95rem;
+}
+
+#carouselHayti .carousel-indicators [data-bs-target] {
+  background-color: var(--or-caraibe);
+  width: 30px;
+  height: 3px;
+  border-radius: 0;
+}
+
+#carouselHayti .carousel-control-prev-icon,
+#carouselHayti .carousel-control-next-icon {
+  background-color: rgba(201,151,58,0.5);
+  border-radius: 50%;
+  padding: 1.2rem;
+  background-size: 50%;
+}
+
+/* ---------- Cartes de services ---------- */
+.service-card {
+  background: var(--blanc);
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all var(--transition);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--or-caraibe), var(--rouge-haiti));
+  transition: width var(--transition);
+}
+
+.service-card:hover::before {
+  width: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(10,22,40,0.12);
+}
+
+.service-card .icon-wrap {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--bleu-nuit), var(--bleu-roi));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 1.8rem;
+  color: var(--or-caraibe);
+  transition: transform var(--transition);
+}
+
+.service-card:hover .icon-wrap {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.service-card h5 {
+  color: var(--bleu-nuit);
+  font-size: 1.15rem;
+  margin-bottom: 0.8rem;
+}
+
+.service-card p {
+  color: var(--gris-texte);
+  font-size: 0.92rem;
+}
+
+/* ---------- À propos — section valeurs ---------- */
+.value-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.8rem;
+}
+
+.value-item .val-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--or-caraibe), var(--or-clair));
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  color: var(--bleu-nuit);
+}
+
+.value-item h6 {
+  font-size: 1rem;
+  color: var(--bleu-nuit);
+  margin-bottom: 0.2rem;
+}
+
+.value-item p {
+  font-size: 0.88rem;
+  color: var(--gris-texte);
+  margin: 0;
+}
+
+/* ---------- Carte équipe ---------- */
+.team-card {
+  background: var(--blanc);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: transform var(--transition), box-shadow var(--transition);
+  text-align: center;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.14);
+}
+
+.team-card .team-avatar {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.team-avatar-placeholder {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: var(--or-caraibe);
+}
+
+.team-card .card-body {
+  padding: 1.5rem;
+}
+
+.team-card h6 {
+  font-size: 1.05rem;
+  background-color: #f2f4f7;
+  color: var(--bleu-nuit);
+  margin-bottom: 0.2rem;
+}
+
+.team-card .role {
+  font-size: 0.8rem;
+  color: var(--or-caraibe);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ---------- Projets / Destinations ---------- */
+.destination-card {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.destination-card .dest-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.dest-placeholder {
+  width: 100%;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  transition: transform 0.5s ease;
+}
+
+.destination-card:hover .dest-img,
+.destination-card:hover .dest-placeholder {
+  transform: scale(1.06);
+}
+
+.destination-card .dest-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(10,22,40,0.92));
+  padding: 2rem 1.5rem 1.5rem;
+  color: var(--blanc);
+  transition: padding var(--transition);
+}
+
+.destination-card:hover .dest-overlay {
+  padding-bottom: 2rem;
+}
+
+.destination-card .dest-overlay h5 {
+  font-size: 1.25rem;
+  margin-bottom: 0.2rem;
+  color: var(--blanc);
+}
+
+.destination-card .dest-overlay .price-tag {
+  background: var(--or-caraibe);
+  color: var(--bleu-nuit);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 0.4rem;
+}
+
+.badge-tag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--rouge-haiti);
+  color: var(--blanc);
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+/* ---------- Formulaire de contact ---------- */
+.contact-section {
+  background: linear-gradient(160deg, var(--bleu-nuit) 0%, var(--bleu-roi) 100%);
+  padding: 5rem 0;
+  color: var(--blanc);
+}
+
+.contact-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 2.5rem;
+}
+
+.contact-card .form-label {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.88rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.contact-card .form-control,
+.contact-card .form-select {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--blanc);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  transition: border-color var(--transition);
+}
+
+.contact-card .form-control:focus,
+.contact-card .form-select:focus {
+  background: rgba(255,255,255,0.1);
+  border-color: var(--or-caraibe);
+  box-shadow: 0 0 0 3px rgba(201,151,58,0.15);
+  color: var(--blanc);
+  outline: none;
+}
+
+.contact-card .form-control::placeholder {
+  color: rgba(255,255,255,0.35);
+}
+
+.contact-card .form-select option {
+  background: var(--bleu-nuit);
+  color: var(--blanc);
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-info-item .ci-icon {
+  width: 46px;
+  height: 46px;
+  background: rgba(201,151,58,0.15);
+  border: 1px solid rgba(201,151,58,0.3);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--or-caraibe);
+  flex-shrink: 0;
+}
+
+.contact-info-item .ci-text strong {
+  display: block;
+  color: var(--blanc);
+  font-size: 0.92rem;
+  margin-bottom: 0.15rem;
+}
+
+.contact-info-item .ci-text span {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.88rem;
+}
+
+/* ---------- Section bleue (fond alternatif) ---------- */
+.section-dark {
+  background: var(--bleu-nuit);
+  color: var(--blanc);
+  padding: 5rem 0;
+}
+
+.section-dark .section-title h2 {
+  color: var(--blanc);
+}
+
+/* ---------- Pied de page ---------- */
+footer {
+  background: #060E1C;
+  color: rgba(255,255,255,0.55);
+  padding: 4rem 0 2rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+footer h6 {
+  color: var(--blanc);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+footer a {
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  font-size: 0.88rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: color var(--transition);
+}
+
+footer a:hover {
+  color: var(--or-caraibe);
+}
+
+footer .footer-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--blanc);
+  margin-bottom: 0.5rem;
+}
+
+footer .footer-divider {
+  border-color: rgba(255,255,255,0.08);
+  margin: 2rem 0 1rem;
+}
+
+footer .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  transition: background var(--transition), color var(--transition);
+  color: rgba(255,255,255,0.55) !important;
+}
+
+.social-links a:hover {
+  background: var(--or-caraibe);
+  color: var(--bleu-nuit) !important;
+}
+
+/* ---------- Bannière interne (pages intérieures) ---------- */
+.page-banner {
+  background: linear-gradient(160deg, var(--bleu-nuit) 0%, var(--bleu-roi) 100%);
+  padding: 6rem 0 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-banner::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--rouge-haiti), var(--or-caraibe), var(--bleu-roi));
+}
+
+.page-banner h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: var(--blanc);
+  margin-bottom: 0.8rem;
+}
+
+.page-banner p {
+  color: rgba(255,255,255,0.65);
+  font-size: 1.05rem;
+}
+
+.page-banner .breadcrumb {
+  justify-content: center;
+  background: transparent;
+  margin-top: 1rem;
+}
+
+.page-banner .breadcrumb-item a {
+  color: var(--or-caraibe);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.page-banner .breadcrumb-item.active {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.85rem;
+}
+
+.page-banner .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255,255,255,0.3);
+}
+
+/* ---------- Accordion (Services) ---------- */
+.accordion-item {
+  border: 1px solid #e8e8e8 !important;
+  border-radius: 8px !important;
+  margin-bottom: 0.8rem;
+  overflow: hidden;
+}
+
+.accordion-button {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  color: var(--bleu-nuit) !important;
+  background: var(--blanc) !important;
+  font-size: 1rem;
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--or-caraibe) !important;
+  background: rgba(201,151,58,0.04) !important;
+}
+
+.accordion-button::after {
+  filter: invert(0);
+}
+
+/* ---------- Tableau de prix ---------- */
+.price-table {
+  border: none;
+}
+
+.price-table thead {
+  background: linear-gradient(135deg, var(--bleu-nuit), var(--bleu-roi));
+  color: var(--blanc);
+}
+
+.price-table thead th {
+  padding: 1rem 1.2rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+}
+
+.price-table tbody tr:hover {
+  background: rgba(201,151,58,0.06);
+}
+
+.price-table td {
+  padding: 0.9rem 1.2rem;
+  vertical-align: middle;
+  border-color: #f0f0f0;
+  font-size: 0.92rem;
+}
+
+/* ---------- Testimonials ---------- */
+.testimonial-card {
+  background: var(--blanc);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  height: 100%;
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: '\201C';
+  position: absolute;
+  top: -0.5rem;
+  left: 1.5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  color: var(--or-caraibe);
+  opacity: 0.25;
+  line-height: 1;
+}
+
+.testimonial-card p {
+  color: var(--gris-texte);
+  font-style: italic;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-card .stars {
+  color: var(--or-caraibe);
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-card .testi-author strong {
+  color: var(--bleu-nuit);
+  font-size: 0.92rem;
+}
+
+.testimonial-card .testi-author span {
+  color: var(--gris-texte);
+  font-size: 0.8rem;
+  display: block;
+}
+
+/* ---------- Section CTA ---------- */
+.cta-section {
+  background: linear-gradient(135deg, var(--or-caraibe) 0%, #a87520 100%);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.cta-section h2 {
+  color: var(--bleu-nuit);
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  color: rgba(10,22,40,0.7);
+  max-width: 550px;
+  margin: 0 auto 2rem;
+}
+
+.btn-dark-navy {
+  background: var(--bleu-nuit);
+  color: var(--blanc);
+  font-weight: 700;
+  border: none;
+  padding: 0.85rem 2.2rem;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  transition: all var(--transition);
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-dark-navy:hover {
+  background: #060E1C;
+  color: var(--blanc);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ---------- Utilitaires ---------- */
+.section-light  { background: var(--gris-clair); }
+.section-pad    { padding: 5rem 0; }
+.text-gold      { color: var(--or-caraibe) !important; }
+.text-navy      { color: var(--bleu-nuit) !important; }
+.divider-gold {
+  width: 60px;
+  height: 3px;
+  background: var(--or-caraibe);
+  margin: 1rem auto;
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 991.98px) {
+  .hero { padding: 7rem 0 3rem; }
+  .hero-plane-icon { font-size: 5rem; top: 10%; right: 3%; transform: none; }
+  .hero-stats .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+}
+
+@media (max-width: 767.98px) {
+  .hero h1 { font-size: 2.4rem; }
+  #carouselHayti .carousel-item img { height: 300px; }
+  .section-pad { padding: 3.5rem 0; }
+  footer .footer-bottom { flex-direction: column; text-align: center; }
+}

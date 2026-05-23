@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Découvrez tous les services de Hayti Airways : vols passagers, fret, lounge VIP, charters et programme de fidélité." />
+  <title>Hayti Airways | Services</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-logo">✈</div>
+        <div class="brand-text">
+          <span class="brand-name">Hayti Airways</span>
+          <span class="brand-sub">Since 1994 · Port-au-Prince</span>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false" aria-label="Ouvrir le menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav gap-1 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="apropos.html">À propos</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="projets.html">Destinations</a></li>
+          <li class="d-flex flex-wrap gap-3"><a class="nav-link" href="contact.html">Réserver</a></li>
+          <li class="nav-item ms-lg-2">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- BANNIÈRE -->
+  <section class="page-banner">
+    <div class="container">
+      <h1>Nos Services</h1>
+      <p>Une gamme complète de services aériens pour passagers et entreprises.</p>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Services</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+
+  <!-- SERVICES PRINCIPAUX  -->
+  <section class="section-pad">
+    <div class="container">
+
+      <!-- Service 1 — Vols passagers -->
+      <div class="row align-items-center g-5 mb-5 pb-5" style="border-bottom: 1px solid #eee;">
+        <div class="col-lg-6">
+          <img src="https://images.unsplash.com/photo-1540339832862-474599807836?w=700&q=80"
+               alt="Cabine passagers Hayti Airways"
+               class="img-fluid rounded-3 shadow" />
+        </div>
+        <div class="col-lg-6">
+          <div class="icon-wrap mb-3" style="width:60px;height:60px;background:linear-gradient(135deg,var(--bleu-nuit),var(--bleu-roi));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--or-caraibe);">
+            <i class="bi bi-airplane-engines"></i>
+          </div>
+          <h2 class="mb-3" style="font-size:1.9rem;">Vols passagers</h2>
+          <p>
+            Hayti Airways propose trois classes de voyage adaptées à tous les budgets
+            et besoins : Économique, Affaires et Première Classe sur les longues distances.
+            Chaque classe offre une expérience distinctive.
+          </p>
+          <!-- Tabs Bootstrap -->
+          <ul class="nav nav-tabs mt-4" id="classTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="eco-tab" data-bs-toggle="tab" data-bs-target="#eco" type="button" role="tab">Économique</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="biz-tab" data-bs-toggle="tab" data-bs-target="#biz" type="button" role="tab">Affaires</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="first-tab" data-bs-toggle="tab" data-bs-target="#first" type="button" role="tab">1re Classe</button>
+            </li>
+          </ul>
+          <div class="tab-content border border-top-0 rounded-bottom p-3" id="classTabContent">
+            <div class="tab-pane fade show active" id="eco" role="tabpanel">
+              <ul class="list-unstyled mt-2">
+                <li class="mb-1"><i class="bi bi-check-circle-fill text-gold me-2"></i>Siège inclinable 78 cm de pas</li>
+                <li class="mb-1"><i class="bi bi-check-circle-fill text-gold me-2"></i>Repas inclus sur vols de plus de 3h</li>
+                <li class="mb-1"><i class="bi bi-check-circle-fill text-gold me-2"></i>1 bagage en soute (23 kg)</li>
+                <li class="mb-1"><i class="bi bi-check-circle-fill text-gold me-2"></i>Divertissement à bord</li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="biz" role="tabpanel">
+              <ul class="list-unstyled mt-2">
+                <li class="mb-1"><i class="bi bi-check-circle-fill text-gold me-2"></i>Siège-lit entièrement plat</li>
+                <li class="mb-1"><i class="bi bi-check-circle-fill text-gold me-2"></i>Menu gastronomique haïtien</li>
+                <li class="mb-1"><i class="bi bi-check-circle-fill text-gold me-2"></i>2 bagages en soute (32 kg chacun)</li>
+                <li class="mb-1"><i class="bi bi-check-circle-fill text-gold me-2"></i>Accès Lounge VIP inclus</li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="first" role="tabpanel">
+              <ul class="list-unstyled mt-2">
+                <li class="mb-1"><i class="bi bi-check-circle-fill text-gold me-2"></i>Suite privée avec porte</li>
+                <li class="mb-1"><i class="bi bi-check-circle-fill text-gold me-2"></i>Chef cuisinier dédié à bord</li>
+                <li class="mb-1"><i class="bi bi-check-circle-fill text-gold me-2"></i>3 bagages en soute (32 kg chacun)</li>
+                <li class="mb-1"><i class="bi bi-check-circle-fill text-gold me-2"></i>Chauffeur privé à destination</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div><!-- /Service 1 -->
+
+
+      <!-- Service 2 — Fret aérien -->
+      <div class="row align-items-center g-5 mb-5 pb-5 flex-lg-row-reverse" style="border-bottom: 1px solid #eee;">
+        <div class="col-lg-6">
+          <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=700&q=80"
+               alt="Fret aérien Hayti Airways, conteneurs et chargement"
+               class="img-fluid rounded-3 shadow" />
+        </div>
+        <div class="col-lg-6">
+          <div class="icon-wrap mb-3" style="width:60px;height:60px;background:linear-gradient(135deg,var(--bleu-nuit),var(--bleu-roi));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--or-caraibe);">
+            <i class="bi bi-box-seam"></i>
+          </div>
+          <h2 class="mb-3" style="font-size:1.9rem;">Fret aérien</h2>
+          <p>
+            Hayti Airways Cargo propose des solutions de transport de marchandises
+            rapides et sécurisées entre Haïti et nos destinations. Produits frais,
+            pièces industrielles, médicaments ou biens de consommation — nous
+            assurons une livraison dans les meilleures conditions.
+          </p>
+          <!-- Accordion FAQ Fret -->
+          <div class="accordion mt-4" id="accordionFret">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#fret1">
+                  Quels types de marchandises acceptez-vous ?
+                </button>
+              </h2>
+              <div id="fret1" class="accordion-collapse collapse show" data-bs-parent="#accordionFret">
+                <div class="accordion-body" style="font-size:.92rem; color:var(--gris-texte);">
+                  Marchandises générales, produits périssables (sous température contrôlée),
+                  animaux vivants, matières dangereuses homologuées IATA, courrier express et e-commerce.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fret2">
+                  Comment suivre mon expédition ?
+                </button>
+              </h2>
+              <div id="fret2" class="accordion-collapse collapse" data-bs-parent="#accordionFret">
+                <div class="accordion-body" style="font-size:.92rem; color:var(--gris-texte);">
+                  Un numéro de suivi vous est fourni à l'émission de votre lettre de transport aérien (LTA).
+                  Vous pouvez suivre l'état de votre envoi 24h/24 sur notre portail Cargo.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fret3">
+                  Quels sont les délais de livraison ?
+                </button>
+              </h2>
+              <div id="fret3" class="accordion-collapse collapse" data-bs-parent="#accordionFret">
+                <div class="accordion-body" style="font-size:.92rem; color:var(--gris-texte);">
+                  Selon la destination et l'option choisie, les délais varient de 24h (express Caraïbes)
+                  à 72h (Europe). Nous proposons également un service économique sous 5 jours ouvrés.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /Service 2 -->
+
+    </div>
+  </section>
+
+
+  <!--  AUTRES SERVICES EN CARTES  -->
+  <section class="section-pad section-light">
+    <div class="container">
+      <div class="section-title">
+        <h2>Services complémentaires</h2>
+        <p>Une expérience complète avant, pendant et après votre vol.</p>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="service-card">
+            <div class="icon-wrap"><i class="bi bi-star"></i></div>
+            <h5>Lounge VIP Citadelle</h5>
+            <p>Notre salon d'affaires à l'aéroport Toussaint Louverture offre restauration, Wi-Fi haut débit, douches et espaces de travail privatifs. Accès inclus en Affaires et 1re Classe.</p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="service-card">
+            <div class="icon-wrap"><i class="bi bi-building"></i></div>
+            <h5>Charters & Groupes</h5>
+            <p>Événements corporate, groupes touristiques, missions humanitaires ou ONG — nous configurons un vol sur mesure selon votre calendrier et votre budget.</p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="service-card">
+            <div class="icon-wrap"><i class="bi bi-award"></i></div>
+            <h5>Programme HaytiMiles</h5>
+            <p>Accumulez des miles à chaque vol et échangez-les contre des billets gratuits, des surclassements ou des accès lounge. Plus vous volez, plus vous gagnez.</p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="service-card">
+            <div class="icon-wrap"><i class="bi bi-heart-pulse"></i></div>
+            <h5>Assistance médicale</h5>
+            <p>Accompagnement de patients en transport médical, équipements médicaux à bord et coordination avec les hôpitaux à destination sur demande.</p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="service-card">
+            <div class="icon-wrap"><i class="bi bi-car-front"></i></div>
+            <h5>Transferts & Hôtels</h5>
+            <p>En partenariat avec des agences locales, nous proposons des packages vol + hôtel + transfert pour simplifier votre séjour à destination.</p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="service-card">
+            <div class="icon-wrap"><i class="bi bi-telephone-inbound"></i></div>
+            <h5>Service client 24h/24</h5>
+            <p>Notre centre d'assistance est disponible 24h/24, 7j/7 par téléphone, e-mail et chat pour toute modification, annulation ou demande spéciale.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TABLEAU TARIFS -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-title">
+        <h2>Tarifs indicatifs</h2>
+        <p>Aperçu de nos prix de départ depuis Port-au-Prince (PAP). Tarifs sujets à disponibilité.</p>
+      </div>
+
+      <div class="table-responsive shadow rounded-3 overflow-hidden">
+        <table class="table price-table mb-0">
+          <thead>
+            <tr>
+              <th>Destination</th>
+              <th>Code</th>
+              <th>Économique</th>
+              <th>Affaires</th>
+              <th>Durée</th>
+              <th>Fréquence</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Miami</strong>, USA</td>
+              <td><span class="badge bg-secondary">MIA</span></td>
+              <td class="text-gold fw-bold">$180</td>
+              <td class="text-gold fw-bold">$490</td>
+              <td>1h 30m</td>
+              <td>Quotidien</td>
+            </tr>
+            <tr>
+              <td><strong>New York</strong>, USA</td>
+              <td><span class="badge bg-secondary">JFK</span></td>
+              <td class="text-gold fw-bold">$260</td>
+              <td class="text-gold fw-bold">$680</td>
+              <td>3h 20m</td>
+              <td>Quotidien</td>
+            </tr>
+            <tr>
+              <td><strong>Montréal</strong>, Canada</td>
+              <td><span class="badge bg-secondary">YUL</span></td>
+              <td class="text-gold fw-bold">$310</td>
+              <td class="text-gold fw-bold">$820</td>
+              <td>4h 15m</td>
+              <td>4× / semaine</td>
+            </tr>
+            <tr>
+              <td><strong>Paris</strong>, France</td>
+              <td><span class="badge bg-secondary">CDG</span></td>
+              <td class="text-gold fw-bold">$620</td>
+              <td class="text-gold fw-bold">$1 850</td>
+              <td>9h 30m</td>
+              <td>3× / semaine</td>
+            </tr>
+            <tr>
+              <td><strong>Santo Domingo</strong>, RD</td>
+              <td><span class="badge bg-secondary">SDQ</span></td>
+              <td class="text-gold fw-bold">$95</td>
+              <td class="text-gold fw-bold">$220</td>
+              <td>0h 45m</td>
+              <td>Plusieurs / jour</td>
+            </tr>
+            <tr>
+              <td><strong>La Havane</strong>, Cuba</td>
+              <td><span class="badge bg-secondary">HAV</span></td>
+              <td class="text-gold fw-bold">$140</td>
+              <td class="text-gold fw-bold">$340</td>
+              <td>1h 10m</td>
+              <td>2× / semaine</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-center mt-3" style="font-size:.82rem; color:var(--gris-texte);">
+        * Taxes d'aéroport non incluses. Tarifs aller simple à partir de. Vérifiez disponibilité sur notre site.
+      </p>
+    </div>
+  </section>
+
+
+  <!--CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Vous avez une question ?</h2>
+      <p>Notre équipe est disponible 24h/24 pour vous accompagner dans votre réservation.</p>
+      <a href="contact.html" class="btn-dark-navy">Contacter le support</a>
+    </div>
+  </section>
+
+
+  <!-- ========== PIED DE PAGE ========== -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand">✈ Hayti Airways</div>
+          <p style="font-size:0.88rem; max-width:280px;">Votre compagnie aérienne haïtienne depuis 1994.</p>
+          <div class="social-links mt-3">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6">
+          <h6>Navigation</h6>
+          <a href="index.html">Accueil</a>
+          <a href="apropos.html">À propos</a>
+          <a href="services.html">Services</a>
+          <a href="projets.html">Destinations</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6">
+          <h6>Services</h6>
+          <a href="services.html">Vols passagers</a>
+          <a href="services.html">Fret aérien</a>
+          <a href="services.html">Lounge VIP</a>
+          <a href="services.html">Charters</a>
+          <a href="services.html">HaytiMiles</a>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h6>Contact</h6>
+          <p style="font-size:.88rem;"><i class="bi bi-geo-alt-fill text-gold me-2"></i>Aéroport Toussaint Louverture, PAP</p>
+          <p style="font-size:.88rem;"><i class="bi bi-telephone-fill text-gold me-2"></i>+509 2210 4400</p>
+          <p style="font-size:.88rem;"><i class="bi bi-envelope-fill text-gold me-2"></i>contact@haytiairways.ht</p>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <div class="footer-bottom">
+        <span>© 2026 Hayti Airways. Tous droits réservés.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script principal Hayti Airways -->
+  <script src="js/main.js"></script>
+</body>
+</html>
